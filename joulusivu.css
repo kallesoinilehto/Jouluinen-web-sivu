@@ -1,0 +1,71 @@
+/* Tausta: tumma taivas + lumihiutaleita */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(ellipse at top, #1e2a44, #0d1220);
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Joulutervehdys */
+.greeting {
+    margin-top: 15vh;
+    animation: fadeIn 3s ease forwards;
+}
+
+.greeting h1 {
+    font-size: 3.5rem;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.greeting p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Joulupukin animaatio */
+.santa-container {
+    position: absolute;
+    top: 20vh;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+}
+
+.santa {
+    position: absolute;
+    left: -400px;
+    width: 350px;
+    animation: flyAcross 12s linear infinite;
+}
+
+@keyframes flyAcross {
+    0% { transform: translateX(-400px) translateY(0); }
+    50% { transform: translateX(calc(100vw + 400px)) translateY(-40px); }
+    100% { transform: translateX(-400px) translateY(0); }
+}
+
+/* Fade sisään */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Lumisade */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 10px;
+    user-select: none;
+    opacity: 0.8;
+    animation: snowFall linear infinite;
+}
+
+@keyframes snowFall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
