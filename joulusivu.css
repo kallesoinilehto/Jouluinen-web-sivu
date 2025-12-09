@@ -26,6 +26,14 @@ body {
     animation: fly 10s linear infinite;
 }
 
+.snowflake {
+    position: fixed;
+    top: -10px;
+    font-size: 24px;
+    color: white;
+    animation: fall linear forwards;
+}
+
 /* Animaatiot */
 @keyframes fly {
     0% { transform: translateX(-300px) translateY(0); }
@@ -36,4 +44,8 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
 }
